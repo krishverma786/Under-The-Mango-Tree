@@ -1,0 +1,909 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text a {
+    color: #f39c12;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Birthstone', cursive;
+}
+
+.logo-img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links ul {
+    font-family: 'Young Serif', static;
+    list-style: none;
+    display: flex;
+    gap: 23px;
+    margin-right: 20px;
+}
+
+.nav-links a:hover {
+    color: #f39c12;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+.book {
+    color: white;
+    border: 2px solid #f39c12;
+    padding: 5px 10px;
+    background-color: #f39c12;
+    border-radius: 5px;
+}
+
+.book:hover {
+    background-color: transparent;
+    color: #f39c12;
+    box-shadow: 0 0 10px #f39c12;
+}
+
+.icon {
+    border: 2px solid #f39c12;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 10px #f39c12;
+}
+
+.icon:hover {
+    border: transparent;
+    box-shadow: 0 0 10px #f39c12;
+}
+
+.hero {
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.italic {
+    font-family: 'Birthstone', cursive;
+    color: #f39c12;
+    font-size: 60px;
+}
+
+.hero-box {
+  flex: 1;
+  overflow: hidden;
+}
+
+.hero-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.hero-text a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 60px;
+    background: #fff;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-family: 'Birthstone', cursive;
+    color: #f39c12;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.about-text h1 {
+    font-size: 49px;
+    color: #333;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 500px;
+}
+
+.about-text {
+    margin-top: 25px;
+    font-weight: 600;
+    color: #222;
+    font-size: 18px;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 50%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.03);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10%;
+    background: #f8f6f6;
+}
+
+.gallery h3 {
+    font-family: 'Birthstone', cursive;
+    color: #f39c12;
+    font-size: 49px;
+}
+
+.gallery h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+.gallery-images {
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+}
+
+.gallery-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05);
+}
+
+.gallery a {
+    background-color: #f39c12;
+    border: 2px solid #f39c12;
+    padding: 5px 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.gallery a:hover {
+    background-color: #ff9d00;
+    border: 1px solid #f39c12;
+}
+
+.location {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10%;
+}
+
+.location h3 {
+    font-family: 'Birthstone', cursive;
+    color: #f39c12;
+    font-size: 45px;
+}
+
+.location h2 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+.map {
+    width: 50vw;
+    height: 60vh;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background: #222;
+    color: white;
+    padding: 40px 10% 20px;
+}
+
+.footer-up {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.left-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-footer h3 {
+    color: #f39c12;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.left-footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.centre img {
+    width: 300px;
+    height: auto;
+}
+
+.right-footer {
+    font-size: 20px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-footer h3 {
+    color: #f39c12;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.right-footer p {
+    line-height: 1.8;
+    max-width: 400px;
+}
+
+.right-footer a {
+    font-size: 20px;
+}
+
+.story {
+    display: flex;
+    flex-direction: row;
+    padding: 80px 10%;
+    text-align: center;
+    background: #fff;
+    gap: 20px;
+}
+
+.story h3 {
+    font-family: 'Birthstone', cursive;
+    color: #f39c12;
+    font-size: 60px;
+}
+
+.story-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-right img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.story p {
+    max-width: 500px;
+    margin: 15px auto;
+    line-height: 1.8;
+    color: #666;
+    font-size: 16px;
+}
+
+.story h4 {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #111;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 10%;
+    background: #fff;
+    flex-wrap: wrap;
+    height: auto;
+    background: url("27.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 0;
+}
+
+.contact-info,
+.contact-form {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-family: 'Birthstone', cursive;
+    font-size: 50px;
+    color: #f39c12;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    margin-bottom: 20px;
+}
+
+.info-box h4 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: white;
+}
+
+.contact-form {
+    border-radius: 10px;
+    flex: 1;
+    background: #fafafa;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background: #f39c12;
+    color: white;
+    cursor: pointer;
+}
+
+.social {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social span {
+    width: 35px;
+    height: 35px;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.booktable {
+    position: relative;
+    background: url("28.jpg") no-repeat center center/cover;
+    padding: 80px 10%;
+}
+
+.booktable-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 60px;
+    border-radius: 10px;
+    color: white;
+    max-width: 900px;
+    margin: auto;
+}
+
+.booktable h2 {
+    font-family: 'Birthstone', cursive;
+    font-size: 55px;
+    color: #f39c12;
+    text-align: center;
+}
+
+.booktable p {
+    text-align: center;
+    color: #ddd;
+    margin: 20px 0 40px;
+    line-height: 1.6;
+}
+
+.booktable-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-group label {
+    width: 120px;
+    font-size: 18px;
+    color: white;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #f39c12;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: transparent;
+    border: 2px solid #f39c12;
+    color: #f39c12;
+}
+
+input:hover, select:hover, textarea:hover {
+    border-color: #f39c12;
+    box-shadow: 0 0 5px #f39c12;
+}
+
+.gallerysec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 10%;
+}
+
+.gallerysec h2 {
+    font-family: 'Birthstone', cursive;
+    font-size: 70px;
+    color: #f39c12;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 300px);
+    gap: 5px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.menu-toggle {
+    display: none; 
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    display: block !important;
+    width: 25px;
+    height: 3px;
+    background-color: white !important; 
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   1. TABLETS AND LAPTOPS MEDIA QUERY (max-width: 1070px)
+   ========================================================================== */
+@media screen and (max-width: 1070px) {
+    .navbar {
+        position: relative; 
+        height: 60px; /* Slim, elegant header height */
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #050b14; /* Deep premium dark blue/black */
+        z-index: 1005;
+    }
+
+    .menu-toggle {
+        display: flex !important; 
+        z-index: 1010;
+    }
+
+    /* COMPACT ACCORDION DROPDOWN CONTAINER */
+    .nav-links {
+        position: absolute;
+        top: 60px; /* Snaps perfectly right under the slim navbar */
+        left: 0;
+        width: 100%;
+        background-color: #050b14; /* Matches the navbar color exactly */
+        max-height: 0; 
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Let it dynamically size to fit the tight list height */
+    .nav-links.active {
+        max-height: max-content !important; /* Dynamically hugs all links perfectly */
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: stretch; /* Stretches the rows fully across the screen width */
+        padding: 0; /* Clear out empty top/bottom space */
+        gap: 0; /* Remove gaps so rows sit flush against each other */
+        margin: 0; 
+        width: 100%;
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links ul li {
+        width: 100%;
+        text-align: left; /* Left-align like the reference image */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07); /* Subtle row divider lines */
+    }
+
+    /* CLEAN FULL-WIDTH ROW LINKS */
+    .nav-links ul li a {
+        display: block;
+        width: 100%;
+        padding: 14px 24px; /* Generous side padding for easy mobile clicking */
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff !important;
+        text-transform: uppercase; /* Clean professional look */
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: background 0.2s ease;
+        text-align: left !important; /* Overrides any global centering rules */
+    }
+
+    /* Subtle highlight when tapping a menu item */
+    .nav-links ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    /* REMOVED BIG GOLD BUTTONS: Making "Book a Table" & "Logout" match normal rows */
+    .nav-links ul li a.book, 
+    .nav-links ul li a.booktable {
+        background-color: transparent !important;
+        color: #f39c12 !important; /* Elegant gold text color highlight instead of block background */
+        font-weight: 700;
+        width: 100% !important;
+        padding: 14px 24px !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* CLEAN FIXED ROW FOR USER ICON */
+    .nav-links ul li a.icon {
+        background: transparent !important;
+        color: #f39c12 !important;
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 0 !important;
+        padding: 14px 24px !important;
+        display: block !important;
+        border: none !important;
+        line-height: normal !important;
+        font-size: 16px !important;
+    }
+
+    /* Simple fallback layout helper if your avatar uses a sub-tag */
+    .nav-links ul li a.icon::before {
+        content: "Profile: "; /* Adds crisp context next to the icon on mobile row layouts */
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .logo-text a {
+        color: #f39c12;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Birthstone', cursive;
+    }
+
+    .logo-img {
+        width: 75px;
+        height: auto;
+    }
+
+    /* Hamburger Animation Transform Vectors */
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* ==========================================================================
+   2. PHONE INTERFACES MEDIA QUERY (max-width: 768px)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex !important;
+    }
+    .about{
+        margin-top: -70px;
+        margin-bottom: -50px;
+    }
+    /* Fixes the Story Section on Mobile */
+    body .story {
+        flex-direction: column !important; /* Stacks image and text cleanly */
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 40px 5% !important; /* Balances the left/right container spacing */
+        gap: 0 !important; /* Removes the side ghost-gap */
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    body .story-right {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    body .story-right img {
+        width: 90% !important; /* Keeps the image balanced inside the screen width */
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 0 auto !important; /* Forces absolute centering */
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: -20px;
+    }
+
+    .logo-text a {
+        color: #f39c12;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: 'Birthstone', cursive;
+    }
+
+    .logo-img {
+        width: 70px;
+        height: auto;
+    }
+
+    /* FIXED: Changed from 280px to max-content so items don't squish or wrap */
+    .nav-links.active {
+        max-height: max-content !important; 
+    }
+
+    /* Keep row heights uniform on tiny screen variants */
+    .nav-links ul li a {
+        padding: 12px 20px !important; 
+        font-size: 13px;
+        text-align: left !important;
+    }
+    
+    .nav-links ul li a.book,
+    .nav-links ul li a.icon {
+        padding: 12px 20px !important;
+    }
+
+    /* Rest of your existing page sections section layout properties... */
+    .hero-box:nth-child(1),
+    .hero-box:nth-child(3) { display: none; }
+    .hero-box:nth-child(2) { flex: 1; width: 100%; }
+    .hero { height: 70vh; }
+    .hero-text { width: 95%; }
+    .hero-text h1 { font-size: 40px; }
+    .italic { font-size: 35px; }
+    .hero-text p { font-size: 15px; }
+    .hide { display: none; }
+    .about-img img { width: 100%; height: 350px; }
+    .about-text { text-align: center; flex: none; width: 100%; }
+    .gallery h2 { text-align: center; font-size: 30px; }
+    .gallery-images {
+        width: 90vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 200px);
+    }
+    .gallery-grid{
+        width: 95vw;
+    }
+    /* FORCED OVERRIDE FOR PHONES */
+    body .gallerysec .gallery-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: auto !important; /* Let the browser handle the row calculation dynamically */
+        gap: 5px !important;
+    }
+
+    /* Force the images to behave cleanly inside the 2 columns */
+    body .gallerysec .gallery-grid img {
+        width: 100% !important;
+        height: 250px !important; /* Keeps your desired height uniform */
+        object-fit: cover !important;
+    }
+    .map { width: 90vw; height: 35vh; }
+    .footer-up { flex-direction: column; gap: 30px; text-align: center; }
+    .left-footer { display: none; }
+    .right-footer { text-align: center; }
+    .contact { flex-direction: column; text-align: center; padding: 40px 5%; }
+    .contact-form { width: 100%; }
+    .booktable { padding: 40px 5%; }
+    .booktable-overlay { padding: 30px 20px; }
+    .form-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .form-group label {
+        width: 35%; 
+        text-align: left;
+        font-size: 16px;
+        color: white;
+        white-space: normal; 
+        line-height: 1.2;
+    }
+    .form-group input {
+        width: 60%; 
+        padding: 12px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+    }
+}
